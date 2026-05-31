@@ -1,15 +1,15 @@
 use clap::{Arg, ArgAction, Command};
 
 fn main() {
-    let matches = Command::new("My Program")
+    let matches = Command::new("Project Centauri")
         .arg(Arg::new("verbose")
              .short('v')
              .long("verbose")
              .help("Enable verbose mode")
-             .action(ArgAction::SetTrue)) // Replaces .takes_value(false)
+             .action(ArgAction::SetTrue))
         .get_matches();
 
-    if matches.get_flag("verbose") { // Replaces .is_present("verbose")
+    if matches.get_flag("verbose") {
         println!("Verbose mode enabled");
     }
 }   
